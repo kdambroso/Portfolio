@@ -1,0 +1,155 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="kdambroso@outlook.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?><!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kellie Dambroso</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/Screen Shot 2018-08-23 at 2.41.45 PM.png" type="image/x-icon"/>
+  </head>
+  <body>
+
+    <aside>
+      <nav>
+        <img src="img/Screen Shot 2018-08-23 at 2.41.45 PM.png" alt="Kellie Dambroso">
+        <a href="#home"><i class="material-icons md-36">home</i>
+          <p>Home</p>
+        </a>
+
+        <a href="#about"><i class="material-icons md-36">person</i>
+          <p>About</p>
+        </a>
+
+        <a href="#projects"><i class="material-icons md-36">image</i>
+          <p>Projects</p>
+        </a>
+        <a href="img/Resume_Kellie_Dambroso copy.pdf"><i class="fa fa-file-pdf-o" style="font-size:34px"></i>
+          <p>Resume</p>
+        </a>
+        <a href="#contact"><i class="material-icons md-36">mail</i>
+          <p>Contact</p>
+        </a>
+      </nav>
+    </aside>
+        <nav class="mobile-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="img/Resume_Kellie_Dambroso copy.pdf">Resume</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+    <main>
+      <header class="home" id="home"><br><br>
+        <h1>Kellie Dambroso</h1>
+        <h5>Full Stack Web Developer</h5>
+        <img src="img/546440_10151709774235184_54690811_n.jpg" alt="">
+      </header>
+
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>
+        <span>Hello, I'm Kellie </span> I'm a new full stack web developer, who loves learning, and is ready for new opportunities. I was an accountant for many years and recently decided to make a career change. I'm a certified scuba diver, I love colored pencil art, music, puzzles, and reading science fiction.
+      </p>
+      <p>
+        I enjoy creating solutions that are both useful and beautiful. I have experience with HTML, CSS, JavaScript, AngularJS, Node, Ruby on Rails, SQL, MongoDB, Git, and Github.
+        <h3>My Skills</h3>
+        <p>Html</p>
+        <div class="container">
+          <div class="skills html">70%</div>
+        </div>
+        <p>CSS</p>
+        <div class="container">
+          <div class="skills css">65%</div>
+        </div>
+        <p>JavaScript</p>
+        <div class="container">
+          <div class="skills javascript">60%</div>
+        </div>
+        <p>AngularJS</p>
+        <div class="container">
+          <div class="skills angular">60%</div>
+        </div>
+        <p>Ruby on Rails</p>
+        <div class="container">
+          <div class="skills ruby">65%</div>
+        </div>
+        <p>SQL</p>
+        <div class="container">
+          <div class="skills sql">80%</div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+        <div class="row-halves">
+          <div class="col">
+            <a href="https://kdambroso.github.io/kdambroso.io/connect_four/"><img src="img/Screen Shot 2018-08-22 at 3.18.32 PM.png" alt="Kellie Dambroso"></a>
+            <h3>Connect Four</h3>
+              <p>Play cute fish themed Connect Four created with HTML, CSS, JavaScript and jQuery 3.2.1 Hosted on github pages.</p>
+          </div>
+          <div class="col">
+          <a href="https://gentle-harbor-98320.herokuapp.com/things">  <img src="img/Screen Shot 2018-08-22 at 3.42.09 PM.png" alt="Things To Do App"></a>
+            <h3>Weather To Do</h3>
+              <p>Get ideas for things to do, "like" the activities that stand out to you, and become a member to add new suggestions. Built with Node.js, EJS, Express, and Mongoose. Hosted on Heroku</p>
+          </div>
+        </div>
+          <div class="row-halves">
+          <div class="col">
+            <a href="https://repawsitory.herokuapp.com/"><img src="img/Screen Shot 2018-08-22 at 3.56.48 PM.png" alt="petfinder"></a>
+            <h3>The Re-PAWS-itory</h3>
+              <p>App for animal lovers to share their animal content, and if all the cuteness online isn't enough, you can access the power of PetFinder to help you adopt your very own furry friend. Created in collaboration with Joshua Payne and Alexis Bohlander, utilizing Github and built with Node, Mongoose, Express, AngularJS, and third part Petfinder API.</p>
+          </div>
+          <div class="col">
+          <a href="https://serene-island-52189.herokuapp.com/">  <img src="img/Screen Shot 2018-08-22 at 4.31.00 PM.png" alt="books"></a>
+            <h3>Tolkien About Books</h3>
+              <p>If you loved the Lord of the Rings, Tolkien About Books is the book catalog for you. See similar books and their summary, to help you decide your next binge read. Created in collaboration with Austin Harris, and Jon Bonnet, and built with Ruby on Rails, React, and PostgreSQL.</p>
+          </div>
+        </div>
+
+      </section>
+      <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="container">
+          <?=$thankYou ?>
+          <form action=method="post" action="contact.php">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="sender">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="senderEmail">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" style="height:200px"></textarea>
+            <input type="submit" value="message">
+          </form>
+      </section>
+      <footer>
+        <section class="top-bar">
+          <a href="https://www.linkedin.com/in/kellie-dambroso/"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+          <a href="https://github.com/kdambroso"><i class="fa fa-github" style="font-size:36px"></i></a>
+        </section>
+        <section class="bottom-bar">
+          <p>&copy 2018 | All rights reserved</p>
+        </section>
+</main>
+
+  </body>
+</html>
