@@ -120,31 +120,6 @@ header h5{
   width: 100%;
   background: var(--grey);
 }
-.skills{
-  text-align: right;
-  padding-right: 20px;
-  line-height: 30px;
-  color: white;
-  background-color: #424242;
-}
-.html{
-  width:70%;
-}
-.css{
-  width: 65%;
-}
-.javascript{
-  width: 60%;
-}
-.angular{
-  width:60%;
-}
-.ruby{
-  width: 65%;
-}
-.sql{
-  width: 80%;
-}
 .projects h3{
   color: white;
   font-weight: 300;
@@ -245,6 +220,7 @@ footer{
     width: 100%;
     margin: 0 0 10px 0;
   }
+
 }
 @media (max-width:600px){
   aside{
@@ -289,4 +265,5 @@ footer{
     background: var(--grey);
     color:var(--licorice);
   }
+
 }
