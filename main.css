@@ -152,6 +152,12 @@ header h5{
   color: var(--grey);
   padding: 10px;
 }
+span a{
+  color: #EFBF00;
+}
+span a:hover{
+  color: var(--grey);
+}
 label{
   color: var(--grey);
 }
