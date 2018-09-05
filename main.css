@@ -156,7 +156,7 @@ span a{
   color: #EFBF00;
 }
 span a:hover{
-  color: var(--grey);
+  color: #c9661a;
 }
 label{
   color: var(--grey);
